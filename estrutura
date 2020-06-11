@@ -1,0 +1,72 @@
+
+def  inorder_example_tree ():
+    árvore  =  BinaryTree ()
+    n1  =  Nó ( 'a' )
+    n2  =  Nó ( '+' )
+    n3  =  Nó ( '*' )
+    n4  =  Nó ( 'b' )
+    n5  =  Nó ( '-' )
+    n6  =  Nó ( '/' )
+    n7  =  Nó ( 'c' )
+    n8  =  Nó ( 'd' )
+    n9  =  Nó ( 'e' )
+
+    n6 . esquerda  =  n7
+    n6 . right  =  n8
+    n5 . esquerda  =  n6
+    n5 . right  =  n9
+    n3 . esquerda  =  n4
+    n3 . direita  =  n5
+    n2 . esquerda  =  n1
+    n2 . right  =  n3
+
+    árvore . root  =  n2
+     árvore de retorno
+    # tree.simetric_traversal ()
+    # impressão()
+
+    # '+'
+    # / \
+    # 'uma' '*'
+    # / \
+    # 'b' '-'
+    # / \
+    # '/' 'e' 
+    # / \
+    # 'c' 'd'
+
+    # (a + (b * ((c / d) - e))))
+
+# Vídeo Percurso em Pós-Ordem:
+def  postorder_example_tree ():
+    árvore  =  BinaryTree ()
+    n1  =  Nó ( 'I' )
+    n2  =  Nó ( 'N' )
+    n3  =  Nó ( 'S' )
+    n4  =  Nó ( 'C' )
+    n5  =  Nó ( 'R' )
+    n6  =  Nó ( 'E' )
+    n7  =  Nó ( 'V' )
+    n8  =  Nó ( 'A' )
+    n9  =  Nó ( '5' )
+    n0  =  Nó ( '3' )
+
+    n0 . esquerda  =  n6
+    n0 . right  =  n9
+    n6 . esquerda  =  n1
+    n6 . direita  =  n5
+    n5 . esquerda  =  n2
+    n5 . direita  =  n4
+    n4 . right  =  n3
+    n9 . esquerda  =  n8
+    n8 . direita  =  n7
+
+    árvore . root  =  n0
+     árvore de retorno
+
+
+se  __name__  ==  "__main__" :
+    tree  =  postorder_example_tree ()
+    print ( "Percurso em pós ordem:" )
+    árvore . postorder_traversal ()
+    print ( "Altura:" , árvore . altura ())
